@@ -11,6 +11,8 @@ import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import Axios from'axios';
 
+
+
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
 
@@ -28,13 +30,20 @@ export function LoginForm(props) {
     console.log(newdata);
   }
   function submit(e){
+
     e.preventDefault();
-    Axios.post(url,{
+    console.log("clicked");
+    Axios.post("http://localhost:5000/api",{
       email:data.email,
       pass:data.pass
+    }).catch(e=>{
+      console.log(e);
     })
-    .then(res=>{
-        console.log(res.data)
+    // .then(res=>{
+    //     console.log(res.data)
+    // })
+    .then(()=>{
+      console.log("temp done");
     })
   }
 
@@ -47,7 +56,7 @@ export function LoginForm(props) {
       <Marginer direction="vertical" margin={10} />
       <MutedLink href="#">Forget your password?</MutedLink>
       <Marginer direction="vertical" margin="1.6em" />
-      <SubmitButton type="submit">Signin</SubmitButton>
+      <SubmitButton  onClick={submit} type="submit">Signin</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Don't have an accoun?{" "}
