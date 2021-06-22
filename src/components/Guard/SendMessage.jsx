@@ -1,9 +1,9 @@
 import React from 'react'
-import './SendMessage.css'
+import '../renderstatus/RenderStatus.css'
 
 function SendMessage() {
     return (
-        <div id="gsubcontainer2">
+        <div className="subcontainer2">
             <label for="flatNo">Flat Number: </label>
             <input type="number" id="flatNo" name="flatNo"/>
             <br/><br/>
