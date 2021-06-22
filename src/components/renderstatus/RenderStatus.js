@@ -26,7 +26,7 @@ function RenderStatus() {
         })
       }
     return (
-        <div id="subcontainer2">
+        <div className="subcontainer2">
             <div>
                 <h3>Status</h3>
                 <p id="status">

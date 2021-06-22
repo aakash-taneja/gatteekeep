@@ -1,15 +1,15 @@
 import React from 'react'
 import ShowMessage from './ShowMessage'
 import SendMessage from './SendMessage'
-import './Guard.css'
+import '../RenderStatusAndMessage.css'
 
 function Guard() {
     return (
-        <div id="gcontainer1">
-            <div id="gnavbar">
+        <div className="container1">
+            <div className="navbar">
                 <p>LOGO</p>
             </div>
-            <div id="gcontainer2">
+            <div className="container2">
                 <ShowMessage/>
                 <SendMessage/>
                 
