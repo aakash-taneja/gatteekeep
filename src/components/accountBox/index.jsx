@@ -96,6 +96,15 @@ const expandingTransition = {
   stiffness: 30,
 };
 
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export function AccountBox(props) {
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState("signin");
@@ -132,6 +141,7 @@ export function AccountBox(props) {
 
   return (
     <AccountContext.Provider value={contextValue}>
+      <AppContainer>
       <BoxContainer>
         <TopContainer>
           <BackDrop
@@ -168,6 +178,7 @@ export function AccountBox(props) {
           {active === "guardSignin" && <GuardSignin />}
         </InnerContainer>
       </BoxContainer>
+      </AppContainer>
     </AccountContext.Provider>
   );
 }
