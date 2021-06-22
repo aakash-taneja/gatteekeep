@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="https://github.com/">
+<!--   <a href="https://github.com/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
   <h3 align="center">Gatekeeper</h3>
 </p>
 
@@ -31,7 +31,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 The main agenda of this project is to provide a more concrete, trustworthy and better security of people living in housing societies.
 A simple website which allows you to know when, where, who and with what purpose a person is entering or leaving the society’s premises. All these facilities are available at one’s fingertips.
