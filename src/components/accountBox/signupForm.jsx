@@ -12,7 +12,7 @@ import { AccountContext } from "./accountContext";
 import Axios from'axios';
 
 export function SignupForm(props) {
-  const { switchToSignin } = useContext(AccountContext);
+  const { switchToSignin,switchToGuardSignin } = useContext(AccountContext);
 
   const url="/api1";
   const [data,setdata]=useState({
@@ -55,6 +55,15 @@ export function SignupForm(props) {
         Already have an account?
         <BoldLink href="#" onClick={switchToSignin}>
           Signin
+        </BoldLink>
+      </MutedLink>
+      <Marginer direction="vertical" margin={10} />
+
+      {/* <Marginer direction="vertical" margin="1em" /> */}
+      <MutedLink href="#">
+        Are you Guard?
+        <BoldLink href="#" onClick={switchToGuardSignin}>
+          Signin Here
         </BoldLink>
       </MutedLink>
       <Marginer direction="vertical" margin={10} />

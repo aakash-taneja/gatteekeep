@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { LoginForm } from "./loginForm";
+import { GuardSignin } from "./guardSignin";
 import { motion } from "framer-motion";
 import { AccountContext } from "./accountContext";
 import { SignupForm } from "./signupForm";
 
 const BoxContainer = styled.div`
-  width: 280px;
-  min-height: 550px;
+width: 580px;
+min-height: 550px;
   display: flex;
   flex-direction: column;
   border-radius: 19px;
   background-color: #fff;
-  box-shadow: 0 0 2px rgba(15, 15, 15, 0.28);
+  box-shadow: 10px 10px 30px -1px rgba(0,0,0,0.1);
+-webkit-box-shadow: 10px 10px 30px -1px rgba(0,0,0,0.1);
+-moz-box-shadow: 10px 10px 30px -1px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
 `;
@@ -28,21 +31,17 @@ const TopContainer = styled.div`
 `;
 
 const BackDrop = styled(motion.div)`
-  width: 160%;
-  height: 550px;
+width: 550px;
+height: 950px;
   position: absolute;
   display: flex;
   flex-direction: column;
   border-radius: 50%;
   transform: rotate(60deg);
-  top: -290px;
+  top: -570px;
   left: -70px;
-  background: rgb(241, 196, 15);
-  background: linear-gradient(
-    58deg,
-    rgba(241, 196, 15, 1) 20%,
-    rgba(243, 172, 18, 1) 100%
-  );
+  background: #4E37B2;
+  background: linear-gradient(58deg, rgba(78,55,178,1) 20%, rgba(81,23,194,1) 100%);
 `;
 
 const HeaderContainer = styled.div`
@@ -78,16 +77,16 @@ const InnerContainer = styled.div`
 
 const backdropVariants = {
   expanded: {
-    width: "233%",
-    height: "1050px",
-    borderRadius: "20%",
+    width: "1650px",
+        height: "2050px",
+    // borderRadius: "20%",
     transform: "rotate(60deg)",
   },
   collapsed: {
-    width: "160%",
-    height: "550px",
+    width: "550px",
+    height: "950px",
     borderRadius: "50%",
-    transform: "rotate(60deg)",
+    transform: "rotate(80deg)",
   },
 };
 
@@ -122,7 +121,14 @@ export function AccountBox(props) {
     }, 400);
   };
 
-  const contextValue = { switchToSignup, switchToSignin };
+  const switchToGuardSignin = () => {
+    playExpandingAnimation();
+    setTimeout(() => {
+      setActive("guardSignin");
+    }, 400);
+  };
+
+  const contextValue = { switchToSignup, switchToSignin ,switchToGuardSignin};
 
   return (
     <AccountContext.Provider value={contextValue}>
@@ -148,10 +154,18 @@ export function AccountBox(props) {
               <SmallText>Please sign-up to continue!</SmallText>
             </HeaderContainer>
           )}
+          {active === "guardSignin" && (
+            <HeaderContainer>
+              <HeaderText>Hi</HeaderText>
+              <HeaderText>Guard</HeaderText>
+              <SmallText>Please sign-in to continue!</SmallText>
+            </HeaderContainer>
+          )}
         </TopContainer>
         <InnerContainer>
           {active === "signin" && <LoginForm />}
           {active === "signup" && <SignupForm />}
+          {active === "guardSignin" && <GuardSignin />}
         </InnerContainer>
       </BoxContainer>
     </AccountContext.Provider>

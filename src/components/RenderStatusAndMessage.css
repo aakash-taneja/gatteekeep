@@ -1,16 +1,15 @@
-#container1{
-    height: 100vh;
-    width: 80%;
-    
-    border-right: 2px solid black;
-    
+#container1 {
+  height: 100vh;
+  width: 80%;
+
+  border-right: 2px solid black;
 }
-#container2{
-    background: yellow;
-    height: 100%;
-    display: flex
+#container2 {
+  background: rgba(78, 55, 178, 0.05);
+  height: 100%;
+  display: flex;
 }
-#navbar{
-    background: turquoise;
-    height: 50px;
+#navbar {
+  background: turquoise;
+  height: 50px;
 }
