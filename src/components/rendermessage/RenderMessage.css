@@ -8,3 +8,25 @@
 .message{
     padding-bottom: 20px;
 }
+
+h3{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+#allow{
+    margin-right:30px;
+    background-color: #c8bbf0;
+}
+
+#deny{
+    margin-left:30px;
+    background-color:#e4e1ed;
+}
+
+button{
+    padding: 7px 15px;
+    border-radius: 6px;
+    border: none;
+    margin: 5px;
+}
