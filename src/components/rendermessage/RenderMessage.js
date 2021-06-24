@@ -37,8 +37,8 @@ export class RenderMessage extends Component {
                             return(
                                 <div className="message">
                                     <p>{msg.content+" "}</p>
-                                    <button onClick={() => this.changeStatusToAllowed(msg.messageID)}>Allow</button>
-                                    <button onClick={() => this.changeStatusToDenied(msg.messageID)}>Deny</button>
+                                    <button id="allow" onClick={() => this.changeStatusToAllowed(msg.messageID)}>Allow</button>
+                                    <button id="deny" onClick={() => this.changeStatusToDenied(msg.messageID)}>Deny</button>
                                 </div>
                             );
                         }
