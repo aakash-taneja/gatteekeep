@@ -43,7 +43,7 @@ export function GuardSignin(props) {
     //     console.log(res.data)
     // })
     .then(()=>{
-      console.log("temp done");
+      console.log("Guardlog done");
     })
   }
 

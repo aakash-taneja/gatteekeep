@@ -4,7 +4,6 @@ import Axios from 'axios';
 
 function RenderStatus() {
 
-    const url = "/api";
     const [data, setdata] = useState({
         status: "",
         time: ""
@@ -17,13 +16,15 @@ function RenderStatus() {
         console.log(newdata);
 
         e.preventDefault();
-        Axios.post(url, {
+        console.log("changed");
+        Axios.post("http://localhost:5000/api", {
             status: data.status,
             time: data.time
-        })
-            .then(res => {
-                console.log(res.data)
-            })
+        }).catch(e=>{
+            console.log(e);
+          }).then(()=>{
+            console.log("status updated done");
+          })
     }
     return (
         <div className="subcontainer2">
@@ -36,9 +37,6 @@ function RenderStatus() {
                     </label>
                     <span>OUT</span>
                 </p>
-
-
-
             </div>
             <div>
                 <p><h3>Will be back by: </h3><input type="time" onChange={(e) => handle(e)} id="time" value={data.time} /></p>

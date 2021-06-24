@@ -16,8 +16,6 @@ import Axios from'axios';
 export function LoginForm(props) {
   const { switchToSignup,switchToGuardSignin } = useContext(AccountContext);
 
-
-  const url="/api";
   const [data,setdata]=useState({
     email:"",
     pass:""    

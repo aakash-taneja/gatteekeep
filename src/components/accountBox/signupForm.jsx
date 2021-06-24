@@ -30,14 +30,16 @@ export function SignupForm(props) {
   }
   function submit(e){
     e.preventDefault();
-    Axios.post(url,{
+    Axios.post("http://localhost:5000/api",{
       name:data.name,
       email:data.email,
       password:data.password,
       confPassword:data.confPassword
+    }).catch(e=>{
+      console.log(e);
     })
     .then(res=>{
-        console.log(res.data)
+        console.log("signuplog done")
     })
   }
   return (
@@ -49,7 +51,7 @@ export function SignupForm(props) {
         <Input type="password" placeholder="Confirm Password" onChange={(e)=>handle(e)} id="confPassword" value={data.confPassword}/>
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <SubmitButton type="submit">Signup</SubmitButton>
+      <SubmitButton onClick={submit} type="submit">Signup</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Already have an account?
