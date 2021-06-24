@@ -59,11 +59,17 @@ function SendMessage() {
       }
     return (
         <FormContainer onSubmit={(e)=>submit(e)}>
+          <div className="guardip">
             <label for="flatNo">Flat Number: </label>
             <input type="number" id="flatNo" name="flatNo" onChange={(e)=>handle(e)} />
+          </div>
+          
             <br/><br/>
+          <div className="guardip">
             <label for="message">Message: </label>
             <input type="text" id="message" name="message" onChange={(e)=>handle(e)} />
+          </div>
+            
             <Marginer direction="vertical" margin="2em" />
             <SubmitButton  onClick={submit} type="submit">Send Message</SubmitButton>
         </FormContainer>
