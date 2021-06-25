@@ -13,7 +13,7 @@ function App() {
     
     <Switch>      
         <Route exact path="/" component={AccountBox}/>
-        <Route path="/dashboard" component={Dashboard}/>      
+        <Route path="/userdashboard" component={Dashboard}/>      
         <Route path="/guardDashboard" component={GuardDashboard}/>              
     </Switch>
   );

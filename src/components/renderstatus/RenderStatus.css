@@ -1,6 +1,12 @@
 .subcontainer2{
   order:2; 
   flex: 5;
+  background: #FCFCFC;
+  border-radius: 15px;
+  box-shadow: 5px 10px 28px 8px  #e4e1ed;
+  margin: 100px 10px 0 10px;
+  height: 30%;
+  padding: 0 10px;
 }
 h3{
   display: inline-block;
@@ -10,10 +16,44 @@ h3{
   display: inline;
   align-content: center;
 }
+
+span{
+    margin: 10px;
+    font-size: 20px;
+}
 .switch input {
   position: absolute;
   opacity: 0;
 }
+
+.subsubcontainer1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.subsubcontainer2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.userip{
+  padding-top: 30px;
+}
+
+
+
+
+#time{
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 0 15px;
+}
+#time:focus{
+  outline: none;
+}
+
 
 /**
  * 1. Adjust this to size

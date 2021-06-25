@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  background: #d1c1d9;
+  background: rgba(78, 55, 178, 0.05);
   padding: 4px 8px 6px 8px;
 }
 

@@ -28,18 +28,26 @@ function RenderStatus() {
     }
     return (
         <div className="subcontainer2">
-            <div>
-                <h3>Status</h3>
-                <p id="status">
-                    <span>IN</span>
-                    <label class="switch"><input type="checkbox" onChange={(e) => handle(e)} id="status" value={data.status} />
+            <div className="subsubcontainer1">
+                <div>
+                 <h3>Status</h3>
+                </div>
+                <div className="userip">
+                 <p id="status">
+                     <span>IN</span>
+                     <label class="switch"><input type="checkbox" onChange={(e) => handle(e)} id="status" value={data.status} />
                         <div></div>
-                    </label>
-                    <span>OUT</span>
-                </p>
+                     </label>
+                     <span>OUT</span>
+                 </p>
+                </div>
             </div>
-            <div>
-                <p><h3>Will be back by: </h3><input type="time" onChange={(e) => handle(e)} id="time" value={data.time} /></p>
+            <div className="subsubcontainer2">
+                <div>
+                <h3>Will be back by: </h3>
+                </div>
+                <div className="userip"><p><input type="time" onChange={(e) => handle(e)} id="time" value={data.time} /></p></div>
+            
             </div>
         </div>
     )

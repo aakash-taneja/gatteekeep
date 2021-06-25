@@ -1,5 +1,30 @@
-#gsubcontainer2{
+/* #gsubcontainer2{
     order:2; 
     flex: 5;
     background: #f7f7f7;
+} */
+
+#changes{
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: 30px 20px;
+
+}
+
+#guardip{
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+label{
+    margin-right: 10px;
+}
+
+input{
+    border-radius: 20px;
+    width: 70%;
+}
+
+input:focus{
+    outline: none;
 }
