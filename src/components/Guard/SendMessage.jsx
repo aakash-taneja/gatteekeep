@@ -3,10 +3,12 @@ import '../renderstatus/RenderStatus.css'
 import Axios from 'axios';
 import styled from "styled-components";
 import { Marginer } from "../marginer";
+import './SendMessage.css'
 
 const FormContainer = styled.form`
 order:2; 
 flex: 5;
+
 `;
 
 const SubmitButton = styled.button`
@@ -58,20 +60,24 @@ function SendMessage() {
         })
       }
     return (
-        <FormContainer onSubmit={(e)=>submit(e)}>
-          <div className="guardip">
-            <label for="flatNo">Flat Number: </label>
+        <FormContainer onSubmit={(e)=>submit(e)} className="subcontainer2" id="changes">
+          <div className="subsubcontainer1" id="guardip">
+            <label for="flatNo">Flat Number:</label>
             <input type="number" id="flatNo" name="flatNo" onChange={(e)=>handle(e)} />
+         
           </div>
+           
           
-            <br/><br/>
-          <div className="guardip">
+            <br/>
+          <div className="subsubcontainer2" id="guardip">
             <label for="message">Message: </label>
             <input type="text" id="message" name="message" onChange={(e)=>handle(e)} />
           </div>
             
+          
+            
             <Marginer direction="vertical" margin="2em" />
-            <SubmitButton  onClick={submit} type="submit">Send Message</SubmitButton>
+            <SubmitButton  onClick={submit} type="submit" id="submit">Send Message</SubmitButton>
         </FormContainer>
     )
 }

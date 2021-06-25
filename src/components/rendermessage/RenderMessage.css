@@ -18,12 +18,13 @@ h3{
 
 #allow{
     margin-right:30px;
-    background-color: #c8bbf0;
+    background-color: #BEB6E2;
+    
 }
 
 #deny{
     margin-left:60px;
-    background-color:#e4e1ed;
+    background-color: rgba(78, 55, 178, 0.1);
 }
 
 button{
@@ -31,5 +32,10 @@ button{
     border-radius: 6px;
     border: none;
     margin: 5px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
 }
 

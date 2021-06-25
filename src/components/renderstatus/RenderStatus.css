@@ -1,7 +1,7 @@
 .subcontainer2{
   order:2; 
   flex: 5;
-  background: #ffffff;
+  background: #FCFCFC;
   border-radius: 15px;
   box-shadow: 5px 10px 28px 8px  #e4e1ed;
   margin: 100px 10px 0 10px;
@@ -50,10 +50,10 @@ span{
     font-size: 20px;
     padding: 0 15px;
 }
-
-#time:active{
-  border-color: blue;
+#time:focus{
+  outline: none;
 }
+
 
 /**
  * 1. Adjust this to size
