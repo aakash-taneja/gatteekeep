@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">    
       <RenderStatusAndMessage id={flatNo}/>
-      {/* <Guard/> */}
       <RenderMembers members={MEMBERS}/>
     </div>
   );

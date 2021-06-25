@@ -5,7 +5,10 @@ import icon from './layer1.png';
 function RenderMembers({ members }) {
     return (
         <div>
-            <div className="socMembers"><p><img src={icon} alt="icon"></img><span>Name</span></p></div>
+            <div className="socMembers">                
+                    <img src={icon} alt="icon"></img>
+                    <span>Name</span>
+            </div>
             <div id="statusMembers">
                 <h3>Society Members</h3>
 
@@ -13,7 +16,11 @@ function RenderMembers({ members }) {
                     members.map((member) => {
                         return (
                             <div key={member.flat} className="socMembers">
-                                <p><img src={icon} alt="icon"></img><span>{member.name + ' :'} </span><span className="st"><strong>{member.status}</strong></span></p>
+                                    <div className="nameAndIcon">
+                                        <img src={icon} alt="icon"></img>
+                                        <span>{member.name + ' :'} </span>
+                                    </div>
+                                    <span className="st"><strong>{member.status}</strong></span>
                             </div>
                         )
                     })

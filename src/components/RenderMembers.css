@@ -1,25 +1,27 @@
-#members{
-    width: 20%;
-    height: 100vh;
-    background: #f7f7f7;
-
+#members {
+  width: 20%;
+  height: 100vh;
+  background: #f7f7f7;
 }
 
-.socMembers{
-    /* border: 1px solid black; */
-    display: flex;
-    margin: 5px;
-    padding: 8px 10px;
-    justify-content: space-between;
-    background: rgba(78, 55, 178, 0.3);
-    border-radius: 10px;
-    align-items: baseline;
+.socMembers {
+  /* border: 1px solid black; */
+  display: flex;
+  margin: 5px;
+  padding: 8px 10px;
+  justify-content: space-between;
+  background: rgba(78, 55, 178, 0.3);
+  border-radius: 10px;
+  align-items: center;
 }
 
-#statusMembers{
-    background: rgba(78, 55, 178, 0.05);
-    padding: 0 5px 5px 5px;
-    margin-left: 10px;
-    margin-top: 100px;
+#statusMembers {
+  background: rgba(78, 55, 178, 0.05);
+  padding: 0 5px 5px 5px;
+  margin-left: 10px;
+  margin-top: 50px;
 }
-
+.nameAndIcon {
+  display: flex;
+  align-items: center;
+}
