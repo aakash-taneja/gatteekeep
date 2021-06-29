@@ -1,7 +1,32 @@
 import React, { useState } from 'react'
 import './RenderStatus.css'
 import Axios from 'axios';
+import styled from "styled-components";
+import { Marginer } from "../marginer";
+const FormContainer = styled.form`
+order:2; 
+flex: 5;
+`;
 
+const SubmitButton = styled.button`
+  width: 50%;
+  padding: 11px 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px 100px 100px 100px;
+  cursor: pointer;
+  transition: all, 240ms ease-in-out;
+  background: #4E37B2;
+  background: linear-gradient(
+    58deg, 
+    rgba(78,55,178,1) 20%, 
+    rgba(81,23,194,1) 100%);
+  &:hover {
+    filter: brightness(1.03);
+  }
+`;
 function RenderStatus() {
 
     const [data, setdata] = useState({
@@ -14,7 +39,8 @@ function RenderStatus() {
         newdata[e.target.id] = e.target.value
         setdata(newdata)
         console.log(newdata);
-
+    }
+    function submit(e){
         e.preventDefault();
         console.log("changed");
         Axios.post("http://localhost:5000/api", {
@@ -27,6 +53,7 @@ function RenderStatus() {
           })
     }
     return (
+        <FormContainer onSubmit={(e)=>submit(e)} >
         <div className="subcontainer2">
             <div className="subsubcontainer1">
                 <div>
@@ -50,6 +77,9 @@ function RenderStatus() {
             
             </div>
         </div>
+        <Marginer direction="vertical" margin="2em" />
+        <SubmitButton  onClick={submit} type="submit" id="submit">Send Message</SubmitButton>
+        </FormContainer>
     )
 }
 
