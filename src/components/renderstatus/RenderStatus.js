@@ -34,9 +34,15 @@ function RenderStatus() {
         time: ""
     })
 
-    function handle(e) {
+    function handletime(e) {
         const newdata = { ...data }
         newdata[e.target.id] = e.target.value
+        setdata(newdata)
+        console.log(newdata);
+    }
+    function handlestatus(e) {
+        const newdata = { ...data }
+        newdata[e.target.id] = e.target.checked
         setdata(newdata)
         console.log(newdata);
     }
@@ -62,7 +68,7 @@ function RenderStatus() {
                 <div className="userip">
                  <p id="status">
                      <span>IN</span>
-                     <label class="switch"><input type="checkbox" onChange={(e) => handle(e)} id="status" value={data.status} />
+                     <label class="switch"><input type="checkbox" onChange={(e) => handlestatus(e)} id="status" value={data.status} />
                         <div></div>
                      </label>
                      <span>OUT</span>
@@ -73,7 +79,7 @@ function RenderStatus() {
                 <div>
                 <h3>Will be back by: </h3>
                 </div>
-                <div className="userip"><p><input type="time" onChange={(e) => handle(e)} id="time" value={data.time} /></p></div>
+                <div className="userip"><p><input type="time" onChange={(e) => handletime(e)} id="time" value={data.time} /></p></div>
             
             </div>
         </div>
