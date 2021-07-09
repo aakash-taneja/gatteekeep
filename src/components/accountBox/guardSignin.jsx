@@ -33,15 +33,12 @@ export function GuardSignin(props) {
 
     e.preventDefault();
     console.log("clicked");
-    Axios.post("http://localhost:5000/api",{
+    Axios.post("http://localhost:5000/guardLogin",{
       email:data.email,
-      pass:data.pass
+      password:data.password
     }).catch(e=>{
       console.log(e);
     })
-    // .then(res=>{
-    //     console.log(res.data)
-    // })
     .then(()=>{
       console.log("Guardlog done");
     })
