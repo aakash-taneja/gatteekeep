@@ -31,9 +31,9 @@ export function LoginForm(props) {
 
     e.preventDefault();
     console.log("clicked");
-    Axios.post("http://localhost:5000/api",{
+    Axios.post("http://localhost:5000/userLogin",{
       email:data.email,
-      pass:data.pass
+      password:data.password
     }).catch(e=>{
       console.log(e);
     })

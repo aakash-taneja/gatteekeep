@@ -30,7 +30,7 @@ export function SignupForm(props) {
   }
   function submit(e){
     e.preventDefault();
-    Axios.post("http://localhost:5000/api",{
+    Axios.post("http://localhost:5000/signup",{
       name:data.name,
       email:data.email,
       password:data.password,
